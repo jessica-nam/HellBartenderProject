@@ -152,6 +152,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1008662101}
+  - {fileID: 1376583257}
   m_Father: {fileID: 1997937491}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -520,7 +521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66244212
@@ -1416,7 +1417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372, y: -134}
+  m_AnchoredPosition: {x: 373.9, y: -139.8}
   m_SizeDelta: {x: 58.1918, y: 53.3658}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330247922
@@ -1665,7 +1666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &343288015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1684,7 +1685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: -132}
+  m_AnchoredPosition: {x: 279, y: 148}
   m_SizeDelta: {x: 180.3021, y: 43.9578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343288016
@@ -2089,13 +2090,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2025542561}
-  m_Father: {fileID: 1550681138}
+  m_Father: {fileID: 1104251988}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -26.124802, y: 0}
-  m_SizeDelta: {x: 52.25, y: 0}
+  m_AnchoredPosition: {x: 533.8752, y: -57.999992}
+  m_SizeDelta: {x: 318.2932, y: 145.9221}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432934610
 MonoBehaviour:
@@ -2329,6 +2330,8 @@ MonoBehaviour:
   CompletedDrink: {fileID: 1760601179}
   ServingDrink: {fileID: 1997937490}
   BackInDialogueView: {fileID: 1817778315}
+  Next: {fileID: 343288014}
+  Continue: {fileID: 330247920}
   isCorrect: 0
   isCorrect1: 0
   isCorrect2: 0
@@ -3849,7 +3852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &956890365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4095,7 +4098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1089989554}
-  characterName: Dhalia
+  characterName: Dahlia
   dialogueText: {fileID: 672600706}
   Next: {fileID: 343288014}
   Continue: {fileID: 330247920}
@@ -4835,7 +4838,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1823290176}
-  - {fileID: 1550681138}
+  - {fileID: 432934609}
   - {fileID: 330247921}
   m_Father: {fileID: 1904002467}
   m_RootOrder: 2
@@ -5765,7 +5768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1376583257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5778,12 +5781,12 @@ RectTransform:
   m_LocalScale: {x: 1.5380437, y: 1.5380437, z: 1.5380437}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1997937491}
+  m_Father: {fileID: 5910859}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230.70654, y: -222.75146}
+  m_AnchoredPosition: {x: -230.70654, y: -222.75148}
   m_SizeDelta: {x: 58.1918, y: 53.3658}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376583258
@@ -6399,75 +6402,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550133124}
-  m_CullTransparentMesh: 1
---- !u!1 &1550681137
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1550681138}
-  - component: {fileID: 1550681142}
-  - component: {fileID: 1550681139}
-  m_Layer: 5
-  m_Name: Player Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1550681138
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550681137}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 432934609}
-  m_Father: {fileID: 1104251988}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 560, y: -58}
-  m_SizeDelta: {x: 266.0432, y: 145.9221}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1550681139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550681137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe429e12922c32649a1cea0f2e058a3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Dhalia
-    sentences:
-    - 'Dhalia: Well? Are you going to make my drink or what?'
-    - "Dhalia: Make me a drink and I\u2019ll tell."
-    - "Dhalia: You\u2019re in Hell, Darling."
-    - 'Dhalia: The Inferno. The Afterlife. The Underworld. Eternal Damnation. Whatever
-      you want to call it'
-    - 'Dhalia: Anyway, thanks for the pick-me-up.'
-    - "Dhalia: I\u2019ll see you around. I\u2019m sure you won\u2019t be going anywhere.\r"
---- !u!222 &1550681142
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550681137}
   m_CullTransparentMesh: 1
 --- !u!1 &1588757904
 GameObject:
@@ -8564,7 +8498,6 @@ RectTransform:
   - {fileID: 1070924633}
   - {fileID: 842376451}
   - {fileID: 1041609941}
-  - {fileID: 1376583257}
   - {fileID: 1165569944}
   - {fileID: 1715146873}
   - {fileID: 1773811235}
@@ -8613,7 +8546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2025542561
 RectTransform:
   m_ObjectHideFlags: 0

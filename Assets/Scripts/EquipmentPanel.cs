@@ -7,6 +7,9 @@ using TMPro;
 
 public class EquipmentPanel : MonoBehaviour
 {
+
+    public static EquipmentPanel instance;
+
     [SerializeField] Transform equipmentSlotsParent;
     [SerializeField] EquipmentSlots[] equipmentSlots;
 
@@ -17,13 +20,18 @@ public class EquipmentPanel : MonoBehaviour
     [SerializeField] GameObject ServingDrink;
     [SerializeField] GameObject BackInDialogueView;
 
+    [SerializeField] GameObject Next;
+    [SerializeField] GameObject Continue;
+
     public bool isCorrect = false;
     public bool isCorrect1 = false;
     public bool isCorrect2 = false;
     public bool isCorrect3 = false;
     public bool making = true;
 
-
+    private void Awake(){
+        instance = this;
+    }
 
     private void Start()
     {
@@ -123,8 +131,12 @@ public class EquipmentPanel : MonoBehaviour
 
     public void ServeButton()
     {
+        Debug.Log("Served button called");
         ServingDrink.SetActive(false);
         BackInDialogueView.SetActive(true);
+        Next.SetActive(false);
+        Continue.SetActive(true);
+     
 
     }
 
