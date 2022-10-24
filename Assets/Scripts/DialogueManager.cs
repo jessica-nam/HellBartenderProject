@@ -48,29 +48,18 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (characterName == "You")
-        {
+        
             if (sentences.Count == 0)
             {
-                //EndDialogue();
+                EndDialogue();
 
                 Next.SetActive(true);
                 Continue.SetActive(false);
                 return;
             }
-        }
+        
 
-        else if (characterName == "Dahlia")
-        {
-            if (sentences.Count == 0)
-            {
-                //EndDialogue();
-
-                Next.SetActive(true);
-                Continue.SetActive(false);
-                return;
-            }
-        }
+       
 
 
 
