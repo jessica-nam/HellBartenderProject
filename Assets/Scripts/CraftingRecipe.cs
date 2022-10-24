@@ -18,7 +18,7 @@ public class CraftingRecipe : ScriptableObject
 
     public bool CanCraft(IItemContainer itemContainer){
         foreach (ItemAmount itemAmount in Materials){
-            if(itemContainer.ItemCount(itemAmount.Item) < itemAmount.Amount){
+            if(itemContainer.ItemCount(itemAmount.Item.ID) < itemAmount.Amount){
                 return false;
             }
         }
@@ -29,12 +29,12 @@ public class CraftingRecipe : ScriptableObject
         if(CanCraft(itemContainer)){
             foreach (ItemAmount itemAmount in Materials){
                 for(int i = 0; i < itemAmount.Amount; i++){
-                    itemContainer.RemoveItem(itemAmount.Item);
+                    itemContainer.RemoveItem(itemAmount.Item.ID);
                 }
             }
             foreach (ItemAmount itemAmount in Results){
                 for(int i = 0; i < itemAmount.Amount; i++){
-                    itemContainer.AddItem(itemAmount.Item);
+                    itemContainer.AddItem(Instantiate(itemAmount.Item));
                 }
             }
         }
