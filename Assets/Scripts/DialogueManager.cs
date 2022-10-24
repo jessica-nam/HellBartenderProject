@@ -60,6 +60,18 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
+        else if (characterName == "Dahlia")
+        {
+            if (sentences.Count == 0)
+            {
+                //EndDialogue();
+
+                Next.SetActive(true);
+                Continue.SetActive(false);
+                return;
+            }
+        }
+
 
 
 

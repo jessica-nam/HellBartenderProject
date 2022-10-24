@@ -134,8 +134,8 @@ public class EquipmentPanel : MonoBehaviour
         Debug.Log("Served button called");
         ServingDrink.SetActive(false);
         BackInDialogueView.SetActive(true);
-        Next.SetActive(false);
-        Continue.SetActive(true);
+        // Next.SetActive(false);
+        // Continue.SetActive(true);
      
 
     }
