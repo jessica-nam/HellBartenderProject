@@ -17,8 +17,15 @@ public class EquipmentPanel : MonoBehaviour
 
 
     [SerializeField] GameObject CompletedDrink;
+    [SerializeField] GameObject CompletedDrink1;
+    [SerializeField] GameObject CompletedDrink2;
     [SerializeField] GameObject ServingDrink;
+    [SerializeField] GameObject ServingDrink1;
+    [SerializeField] GameObject ServingDrink2;
     [SerializeField] GameObject BackInDialogueView;
+    [SerializeField] GameObject BackInDialogueView1;
+    [SerializeField] GameObject BackInDialogueView2;
+
 
     [SerializeField] GameObject Next;
     [SerializeField] GameObject Continue;
@@ -29,7 +36,8 @@ public class EquipmentPanel : MonoBehaviour
     public bool isCorrect3 = false;
     public bool making = true;
 
-    private void Awake(){
+    private void Awake()
+    {
         instance = this;
     }
 
@@ -83,7 +91,7 @@ public class EquipmentPanel : MonoBehaviour
         return false;
     }
 
-    public void Craft()
+    public void CraftPumpkin()
     {
 
 
@@ -106,37 +114,94 @@ public class EquipmentPanel : MonoBehaviour
             isCorrect3 = true;
         }
 
+    }
 
+    public void CraftSunrise()
+    {
+        if (equipmentSlots[0].Item.name == "Blood")
+        {
+            Debug.Log("Blood added");
+            isCorrect1 = true;
 
+        }
+        if (equipmentSlots[1].Item.name == "Eyecandy")
+        {
+            Debug.Log("Eyecandy added");
+            isCorrect2 = true;
+        }
 
+        if (equipmentSlots[2].Item.name == "Poison")
+        {
+            Debug.Log("Poison added");
+            isCorrect3 = true;
+        }
     }
 
     public void CraftButton()
     {
         Debug.Log("Craft button clicked");
-        Craft();
-        if (isCorrect1 && isCorrect2 && isCorrect3)
+        if (DialogueManager.instance.characterName == "Dahlia")
         {
-            isCorrect = true;
-            Debug.Log("Drink made");
-            CompletedDrink.SetActive(true);
-            making = false;
+            CraftPumpkin();
+            if (isCorrect1 && isCorrect2 && isCorrect3)
+            {
+                isCorrect = true;
+                Debug.Log("Drink made");
+                CompletedDrink.SetActive(true);
+                making = false;
+            }
+            else
+            {
+                CompletedDrink.SetActive(false);
+                isCorrect = false;
+            }
         }
-        else
+
+        if (DialogueManager.instance.characterName == "Salem")
         {
-            CompletedDrink.SetActive(false);
-            isCorrect = false;
+            CraftSunrise();
+            if (isCorrect1 && isCorrect2 && isCorrect3)
+            {
+                isCorrect = true;
+                Debug.Log("Drink made");
+                CompletedDrink1.SetActive(true);
+                making = false;
+            }
+            else
+            {
+                CompletedDrink1.SetActive(false);
+                isCorrect = false;
+            }
         }
+
     }
 
     public void ServeButton()
     {
         Debug.Log("Served button called");
-        ServingDrink.SetActive(false);
-        BackInDialogueView.SetActive(true);
+        
+
+        
         // Next.SetActive(false);
         // Continue.SetActive(true);
-     
+
+        if (DialogueManager.instance.characterName == "Dahlia")
+        {
+            ServingDrink.SetActive(false);
+            BackInDialogueView.SetActive(true);
+        }
+  
+        if (DialogueManager.instance.characterName == "Salem")
+        {
+            ServingDrink1.SetActive(false);
+            BackInDialogueView1.SetActive(true);
+        }
+        if (DialogueManager.instance.characterName == "Edmund")
+        {
+            ServingDrink2.SetActive(false);
+            BackInDialogueView2.SetActive(true);
+        }
+
 
     }
 
