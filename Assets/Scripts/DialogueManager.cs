@@ -14,6 +14,9 @@ public class DialogueManager : MonoBehaviour
     public string characterName;
 
     public TextMeshProUGUI dialogueText;
+
+    [SerializeField] GameObject Next;
+    [SerializeField] GameObject Continue;
     //keeps track of descendants 
     private Queue<string> sentences; //FIFO - better format for dialogue
 
@@ -41,16 +44,45 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void DisplayNextSentence(){
+        if(characterName == "You"){
+            if(sentences.Count == 0){
+            EndDialogue();
+            Next.SetActive(true);
+            Continue.SetActive(false);
+            return;
+            }
+        }
+        if(characterName == "Dahlia"){
+            if(sentences.Count == 6){
+            EndDialogue();
+            Next.SetActive(true);
+            Continue.SetActive(false);
+            return;
+            }
+        }
         if(sentences.Count == 0){
             EndDialogue();
             return;
         }
+        
         string sentence = sentences.Dequeue();
         Debug.Log(sentence);
         dialogueText.text = sentence;
+        Debug.Log(sentences.Count);
+
+       
     }
 
     void EndDialogue(){
         Debug.Log("End convo");
     }
+
+    // public void DialogueFlow(){
+    //     if(sentences.Count == 0){
+    //         EndDialogue();
+    //         Next.SetActive(true);
+    //         Continue.SetActive(false);
+    //         return;
+    //     }
+    // }
 }

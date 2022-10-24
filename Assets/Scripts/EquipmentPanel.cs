@@ -12,7 +12,7 @@ public class EquipmentPanel : MonoBehaviour
 
     public event Action<Item> OnItemRightClickedEvent;
 
-    
+
     [SerializeField] GameObject CompletedDrink;
     [SerializeField] GameObject ServingDrink;
     [SerializeField] GameObject BackInDialogueView;
@@ -31,7 +31,7 @@ public class EquipmentPanel : MonoBehaviour
         {
             equipmentSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
         }
-        
+
     }
 
 
@@ -41,7 +41,7 @@ public class EquipmentPanel : MonoBehaviour
         equipmentSlots = equipmentSlotsParent.GetComponentsInChildren<EquipmentSlots>();
     }
 
-  
+
 
     public bool AddItem(EquippableItem item, out EquippableItem previousItem)
     {
@@ -52,7 +52,7 @@ public class EquipmentPanel : MonoBehaviour
                 previousItem = (EquippableItem)equipmentSlots[i].Item;
                 equipmentSlots[i].Item = item;
                 //Debug.Log(equipmentSlots[i].Item.name);
-                
+                Debug.Log(DialogueManager.instance.characterName);
                 return true;
             }
         }
@@ -60,7 +60,7 @@ public class EquipmentPanel : MonoBehaviour
         return false;
     }
 
-    
+
 
     public bool RemoveItem(EquippableItem item)
     {
@@ -78,63 +78,51 @@ public class EquipmentPanel : MonoBehaviour
     public void Craft()
     {
 
-        if (DialogueManager.instance.characterName == "Eye girl")
+
+
+        if (equipmentSlots[0].Item.name == "Toxins")
         {
-            if (making)
-            {
-                if (equipmentSlots[0].Item.name == "Toxins")
-                {
-                    Debug.Log("Toxins added");
-                    isCorrect1 = true;
-
-                }else if(equipmentSlots[0].Item.name == null)
-                {
-                    isCorrect1 = false;
-                }
-
-
-                if (equipmentSlots[1].Item.name == "Pumpkin")
-                {
-                    Debug.Log("Pumpkin added");
-                    isCorrect2 = true;
-                }else if(equipmentSlots[1].Item.name == null)
-                {
-                    isCorrect2 = false;
-                }
-
-                if (equipmentSlots[2].Item.name == "Ghosts")
-                {
-                    Debug.Log("Ghosts added");
-                    isCorrect3 = true;
-                }else if(equipmentSlots[2].Item.name == null)
-                {
-                    isCorrect3 = false;
-                }
-
-                if (isCorrect1 && isCorrect2 && isCorrect3)
-                {
-                    isCorrect = true;
-                    Debug.Log("Drink made");
-                    CompletedDrink.SetActive(true);
-                    making = false;
-                }
-                else
-                {
-                    CompletedDrink.SetActive(false);
-                    isCorrect = false;
-                }
-            }
-
+            Debug.Log("Toxins added");
+            isCorrect1 = true;
 
         }
+        if (equipmentSlots[1].Item.name == "Pumpkin")
+        {
+            Debug.Log("Pumpkin added");
+            isCorrect2 = true;
+        }
+
+        if (equipmentSlots[2].Item.name == "Ghosts")
+        {
+            Debug.Log("Ghosts added");
+            isCorrect3 = true;
+        }
+
+
+
 
     }
 
-    public void CraftButton(){
+    public void CraftButton()
+    {
+        Debug.Log("Craft button clicked");
         Craft();
+        if (isCorrect1 && isCorrect2 && isCorrect3)
+        {
+            isCorrect = true;
+            Debug.Log("Drink made");
+            CompletedDrink.SetActive(true);
+            making = false;
+        }
+        else
+        {
+            CompletedDrink.SetActive(false);
+            isCorrect = false;
+        }
     }
 
-    public void ServeButton(){
+    public void ServeButton()
+    {
         ServingDrink.SetActive(false);
         BackInDialogueView.SetActive(true);
 
