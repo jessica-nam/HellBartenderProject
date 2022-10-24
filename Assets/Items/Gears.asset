@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9098bd43244a8e4da754fab4d2c93fa, type: 3}
-  m_Name: Poison
+  m_Name: Gears
   m_EditorClassIdentifier: 
-  id: 7ab6274fc030f46458d8823f3a9f1948
-  ItemName: Poison
-  Icon: {fileID: 21300000, guid: 0a1ec35ddaa33e44393716f9015bb9eb, type: 3}
+  id: 1fb06dc6d1a57834296eee4622cb2815
+  ItemName: Gear
+  Icon: {fileID: 21300000, guid: 196a40bc290e39d48bec6db0de19651b, type: 3}
   Drink: 0
   DrinkPercent: 0
-  EquipmentType: 1
+  EquipmentType: 2

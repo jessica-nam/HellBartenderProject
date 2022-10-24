@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9098bd43244a8e4da754fab4d2c93fa, type: 3}
-  m_Name: Poison
+  m_Name: Flames
   m_EditorClassIdentifier: 
-  id: 7ab6274fc030f46458d8823f3a9f1948
-  ItemName: Poison
-  Icon: {fileID: 21300000, guid: 0a1ec35ddaa33e44393716f9015bb9eb, type: 3}
+  id: 2ae7d3b96cd9fc64db70e753a81a1f33
+  ItemName: Flames
+  Icon: {fileID: 21300000, guid: c49f169660ac6fb44bba760a53666699, type: 3}
   Drink: 0
   DrinkPercent: 0
   EquipmentType: 1

@@ -124,15 +124,15 @@ public class EquipmentPanel : MonoBehaviour
             isCorrect1 = true;
 
         }
-        if (equipmentSlots[1].Item.name == "Eyecandy")
+        if (equipmentSlots[1].Item.name == "Poison")
         {
-            Debug.Log("Eyecandy added");
+            Debug.Log("Poison added");
             isCorrect2 = true;
         }
 
-        if (equipmentSlots[2].Item.name == "Poison")
+        if (equipmentSlots[2].Item.name == "Eyecandy")
         {
-            Debug.Log("Poison added");
+            Debug.Log("Eyecandy added");
             isCorrect3 = true;
         }
     }
