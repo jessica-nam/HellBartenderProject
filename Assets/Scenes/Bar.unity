@@ -2382,7 +2382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &375936253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3251,7 +3251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bcb23308ff3f396459a06e775148a58e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 740605d3bc6a6a54b9253e68cfd529d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3687,7 +3687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &639577920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5060,7 +5060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &856433998
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5485,7 +5485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &948667866
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5834,8 +5834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 17, y: 61}
-  m_SizeDelta: {x: 67.9371, y: 143.4763}
+  m_AnchoredPosition: {x: 26.186, y: 89}
+  m_SizeDelta: {x: 86.31, y: 156.599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998692354
 MonoBehaviour:
@@ -5850,11 +5850,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Galaxy face
+    name: Salem
     sentences:
-    - My face is space
-    - I have so much hw to do
-    - I hope this works
+    - "Salem: Where\u2019s my drink?"
+    - "Salem: I\u2019m afraid this will be a shift that doesn\u2019t end for you."
+    - "Salem: Lucky for us, we\u2019ve been needing a bartender around here.\r"
+    - "Salem: And I\u2019ve been a fan of your mixology for years.\r"
+    - "YOu: You mean, back on Earth?\r"
+    - "Salem: Well of course. We watch humans regularly so we know what to expect
+      when they get here.\r"
+    - "Salem: Needless to say, you haven\u2019t disappointed.\r"
 --- !u!114 &998692355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8669,8 +8674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 264, y: 6}
-  m_SizeDelta: {x: 707.4497, y: 92.919}
+  m_AnchoredPosition: {x: 258.19907, y: -0.114}
+  m_SizeDelta: {x: 682.358, y: 60.311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1442764640
 GameObject:
@@ -11173,7 +11178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.2255, y: 91.5402}
+  m_AnchoredPosition: {x: 42, y: 65}
   m_SizeDelta: {x: 249.9531, y: 30.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1831100877
@@ -11509,7 +11514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1904002467
 RectTransform:
   m_ObjectHideFlags: 0
