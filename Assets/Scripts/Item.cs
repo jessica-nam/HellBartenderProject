@@ -9,9 +9,9 @@ public class Item : ScriptableObject
 	public string ItemName;
 	public Sprite Icon;
 
-    protected virtual void OnValidate()
-	{
-		string path = AssetDatabase.GetAssetPath(this);
-		id = AssetDatabase.AssetPathToGUID(path);
-	}
+    // protected virtual void OnValidate()
+	// {
+	// 	string path = AssetDatabase.GetAssetPath(this);
+	// 	id = AssetDatabase.AssetPathToGUID(path);
+	// }
 }
