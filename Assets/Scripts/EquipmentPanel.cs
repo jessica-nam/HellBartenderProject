@@ -137,6 +137,27 @@ public class EquipmentPanel : MonoBehaviour
         }
     }
 
+    public void CraftHeisenberg()
+    {
+        if (equipmentSlots[0].Item.name == "Germs")
+        {
+            Debug.Log("Germs added");
+            isCorrect1 = true;
+
+        }
+        if (equipmentSlots[1].Item.name == "Flames")
+        {
+            Debug.Log("Flames added");
+            isCorrect2 = true;
+        }
+
+        if (equipmentSlots[2].Item.name == "Gears")
+        {
+            Debug.Log("Gears added");
+            isCorrect3 = true;
+        }
+    }
+
     public void CraftButton()
     {
         Debug.Log("Craft button clicked");
@@ -170,6 +191,23 @@ public class EquipmentPanel : MonoBehaviour
             else
             {
                 CompletedDrink1.SetActive(false);
+                isCorrect = false;
+            }
+        }
+
+        if (DialogueManager.instance.characterName == "Edmund")
+        {
+            CraftHeisenberg();
+            if (isCorrect1 && isCorrect2 && isCorrect3)
+            {
+                isCorrect = true;
+                Debug.Log("Drink made");
+                CompletedDrink2.SetActive(true);
+                making = false;
+            }
+            else
+            {
+                CompletedDrink2.SetActive(false);
                 isCorrect = false;
             }
         }
